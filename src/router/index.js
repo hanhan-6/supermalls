@@ -2,32 +2,32 @@ import Vue from 'vue'
 import vueRouter from 'vue-router'
 
 
-const Home=()=>import('../views/home/Home.vue')
-const Category=()=>import('../views/category/Category.vue')
-const Cart=()=>import('../views/cart/Cart.vue')
-const Profile=()=>import('../views/profile/Profile.vue')
+const Home=()=>import('views/home/Home.vue')
+const Category=()=>import('views/category/Category.vue')
+const Cart=()=>import('views/cart/Cart.vue')
+const Profile=()=>import('views/profile/Profile.vue')
 
 Vue.use(vueRouter);
 const routes=[
     {
         path:'',
-        redirect:'/Home'
+        redirect:'Home'
     },
     {
         path:'/home',
-        component:'/Home'
+        component:Home
     },
     {
         path:'/category',
-        component:'/Category'
+        component:Category
     },
     {
         path:'/cart',
-        component:'/Cart'
+        component:Cart
     },
     {
         path:'/profile',
-        component:'/Profile'
+        component:Profile
     }
 ]
 const router=new vueRouter({
